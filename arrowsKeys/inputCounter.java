@@ -47,12 +47,22 @@ public class inputCounter {
 
 			@Override
 			public void keyPressed(KeyEvent e) {
-				int keyCode = e.getkeyCode();
+				int keyCode = e.getKeyCode();
 				switch(keyCode) {
 				case KeyEvent.VK_UP:
 				up.setText("Up:  " + Integer.toString(upCount++));
 				break;
+				case KeyEvent.VK_DOWN:
+					down.setText("Down:  " + Integer.toString(downCount++));
+					break;
+				case KeyEvent.VK_LEFT:
+					left.setText("Left:  " + Integer.toString(leftCount++));
+					break;
+				case KeyEvent.VK_RIGHT:
+					right.setText("Right:  " + Integer.toString(rightCount++));
+					break;
 				
+			}
 			}
 
 			@Override
@@ -60,11 +70,15 @@ public class inputCounter {
 				// TODO Auto-generated method stub
 				
 			}
+			});
 			
+		frame.add(panel);
+	}
 	
 public static void main(String[] args) {
 	new inputCounter();
 }
 	
-	}
+			}
+		
 
